@@ -10,3 +10,6 @@ DATABASES = {
         "PORT": ""
     }
 }
+
+MEDIA_ROOT = os.path.expanduser(os.path.join("~/Sites", SITE_DOMAIN, "media"))
+STATIC_ROOT = os.path.expanduser(os.path.join("~/Sites", SITE_DOMAIN, "static"))

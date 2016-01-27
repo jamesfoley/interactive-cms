@@ -1,8 +1,7 @@
 from django.conf.urls import include, url
-from admin.main import main_admin
-from admin.user import user_admin
+from cms.admin import main_admin_site, user_admin_site
 
 urlpatterns = [
-    url(r'^main-admin/', include(main_admin.urls)),
-    url(r'^user-admin/', include(user_admin.urls)),
+    url(r'^cms-admin/', main_admin_site.urls),
+    url(r'^admin/', user_admin_site.urls),
 ]
