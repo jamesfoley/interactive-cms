@@ -19,6 +19,10 @@ class Page(models.Model):
         'sites.Site'
     )
 
+    order = models.PositiveIntegerField(
+        default=0
+    )
+
     def __unicode__(self):
         return self.title
 
