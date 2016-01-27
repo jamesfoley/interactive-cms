@@ -5,12 +5,13 @@ from cms.apps.users.models import User
 
 class MainAdminSite(AdminSite):
     def has_permission(self, request):
-        return super(MainAdminSite, self).has_permission(request)
+        return request.user.is_staff
 
 
 class UserAdminSite(AdminSite):
     def has_permission(self, request):
-        return super(MainAdminSite, self).has_permission(request)
+        print request.site
+        return request.user.is_staff
 
 
 main_admin_site = MainAdminSite(name='mainadmin')

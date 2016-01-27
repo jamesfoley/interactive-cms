@@ -41,8 +41,9 @@ INSTALLED_APPS = (
 
     'django_extensions',
 
-    'cms.apps.users',
+    'cms.apps.pages',
     'cms.apps.sites',
+    'cms.apps.users',
 )
 
 MIDDLEWARE_CLASSES = (
