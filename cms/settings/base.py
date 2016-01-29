@@ -57,7 +57,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
-    'cms.apps.sites.middleware.InteractiveCmsSiteMiddleware',
+    'cms.apps.manage.middleware.CmsManageMiddleware',
 )
 
 ROOT_URLCONF = 'cms.urls'

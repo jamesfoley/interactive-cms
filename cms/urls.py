@@ -1,7 +1,7 @@
-from django.conf.urls import include, url
-from cms.admin import main_admin_site, user_admin_site
+from django.conf.urls import  url, include
+
+from apps.manage import urls as manage_urls
 
 urlpatterns = [
-    url(r'^cms-admin/', main_admin_site.urls),
-    url(r'^admin/', user_admin_site.urls),
+    url(r'^manage/', include(manage_urls, namespace="manage")),
 ]
