@@ -21,7 +21,7 @@ class Login(FormView):
     def form_valid(self, form):
 
         # Form is valid, log the user in
-        user = authenticate(email=form.cleaned_data['email'], password=form.cleaned_data['password'])
+        user = authenticate(**form.cleaned_data)
         login(self.request, user)
 
         return super(Login, self).form_valid(form)
