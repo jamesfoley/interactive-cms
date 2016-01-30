@@ -2,7 +2,7 @@
   "root": {
     "appSrc": "./cms/apps/**/assets",
     "src": "./cms/assets",
-    "dest": "./cms/static/build"
+    "dest": "./cms/static"
   },
 
   "tasks": {
