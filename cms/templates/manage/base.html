@@ -1,12 +1,20 @@
+{% load static %}
+{% load render_bundle from webpack_loader %}
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+
+  <link rel="stylesheet" href="{% static 'build/css/app.css' %}">
 </head>
 <body>
   {% block body %}
-  
+
   {% endblock %}
+
+  {% render_bundle 'shared' 'js' %}
+  {% render_bundle 'app' 'js' %}
 </body>
 </html>
