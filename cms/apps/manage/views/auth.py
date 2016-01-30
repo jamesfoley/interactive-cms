@@ -2,6 +2,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import redirect
 from django.views.generic import FormView, View
 
+from cms.forms import CustomErrorList
 from ..forms.auth import LoginForm
 
 
@@ -9,6 +10,11 @@ class Login(FormView):
     form_class = LoginForm
     template_name = 'manage/auth/login.html'
     success_url = '/manage/'
+
+    def get_form_kwargs(self):
+        kwargs = super(Login, self).get_form_kwargs()
+        kwargs['error_class'] = CustomErrorList
+        return kwargs
 
     def get_success_url(self):
 

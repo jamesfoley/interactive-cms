@@ -5,12 +5,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Interactive CMS</title>
 
-  <link rel="stylesheet" href="{% static 'build/css/app.css' %}">
+  <link rel="stylesheet" href="{% static 'css/manage.css' %}">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
   {% block body %}
+
+    {% block header %}
+      <header class="header"></header>
+    {% endblock %}
+
+    <div class="{% block site-container-class %}site-container{% endblock %}">
+      {% block content %}{% endblock %}
+    </div>
+
+    {% block footer %}
+      <footer></footer>
+    {% endblock %}
 
   {% endblock %}
 

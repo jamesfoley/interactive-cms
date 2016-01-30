@@ -1,0 +1,8 @@
+// Local variables
+$header-height: 50px;
+$header-colour: #6dadff;
+
+.header {
+  height: $header-height;
+  background-color: $header-colour;
+}

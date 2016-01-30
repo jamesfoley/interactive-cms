@@ -1,0 +1,12 @@
+html, body {
+  min-height: 100vh;
+}
+
+.site-container {}
+.site-container--centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}

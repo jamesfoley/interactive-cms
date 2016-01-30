@@ -1,5 +1,4 @@
 import Vue from 'vue'
+import VueConfig from './vue.config'
 
-new Vue({
-  el: '#app'
-})
+new Vue(VueConfig).$mount('body')

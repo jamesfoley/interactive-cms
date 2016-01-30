@@ -1,0 +1,13 @@
+// Local variables
+$primary-button-colour: #c8d8ff;
+
+.button {
+  outline: none;
+
+  padding: 5px 15px;
+
+  background: $primary-button-colour;
+  border: none;
+
+  font-size: 16px;
+}

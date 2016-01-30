@@ -1,0 +1,22 @@
+.alert {
+  margin: 0 0 $element-spacing 0;
+  padding: 10px;
+
+  border: 1px solid shade($alert-info-background-colour, 10%);
+}
+.alert.alert--info {
+  border: none;
+  background-color: $alert-info-background-colour;
+}
+.alert.alert--success {
+  border: none;
+  background-color: $alert-success-background-colour;
+}
+.alert.alert--warning {
+  border: none;
+  background-color: $alert-warning-background-colour;
+}
+.alert.alert--error {
+  border: none;
+  background-color: $alert-error-background-colour;
+}

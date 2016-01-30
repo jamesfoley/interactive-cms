@@ -1,0 +1,16 @@
+@import "../../../node_modules/normalize.css/normalize";
+
+// Global variables
+$element-spacing: 15px;
+
+$alert-info-background-colour: #d8fdff;
+$alert-success-background-colour: #d5ffe2;
+$alert-warning-background-colour: #fffdd1;
+$alert-error-background-colour: #ffebe1;
+
+
+@import "manage/misc/mixins.scss";
+
+@import "manage/base/**/*.scss";
+@import "manage/components/**/*.scss";
+@import "manage/pages/**/*.scss";

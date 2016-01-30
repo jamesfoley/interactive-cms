@@ -1,0 +1,16 @@
+// Local variables
+$heading-background-colour: #f1ccff;
+
+.panel {
+  border: 1px solid #dadada;
+}
+.panel__heading {
+  margin: 0 0 $element-spacing 0;
+  padding: 20px;
+
+  background-color: $heading-background-colour;
+  text-align: center;
+}
+.panel__content {
+  padding: 20px;
+}

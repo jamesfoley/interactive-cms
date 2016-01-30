@@ -1,0 +1,43 @@
+.form {}
+.form__field {
+  margin-bottom: $element-spacing;
+}
+.form__field-label {
+  display: block;
+}
+.form__field-text-input {
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.form__field--has-error .form__field-label {
+  color: darken($alert-error-background-colour, 70%);
+}
+.form__field--has-error .form__field-text-input {
+  color: darken($alert-error-background-colour, 70%);
+  border: 1px solid shade($alert-error-background-colour, 20%);
+}
+.form__error-list {
+  margin: 5px 0 0 0;
+  padding: 10px;
+
+  background-color: $alert-error-background-colour;
+  border: 1px solid shade($alert-error-background-colour, 20%);
+
+  font-size: 13px;
+  list-style: none;
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  li:last-child {
+    margin: 0;
+  }
+}
+
+.form__field-submit {
+  @extend .button;
+}
