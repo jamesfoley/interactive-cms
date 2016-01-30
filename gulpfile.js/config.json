@@ -1,0 +1,51 @@
+{
+  "root": {
+    "appSrc": "./cms/apps/**/assets",
+    "src": "./cms/assets",
+    "dest": "./cms/static/build"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "notify": false,
+      "open": false,
+      "proxy": {
+        "target": "0.0.0.0:8000"
+      }
+    },
+
+    "js": {
+      "src": "js",
+      "dest": "js",
+      "extractSharedJs": true,
+      "entries": {
+        "app": ["./main.js"]
+      },
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "scss",
+      "dest": "css",
+      "extensions": ["scss", "css"]
+    },
+
+    "stylelint": {
+      "src": "css",
+      "dest": "css",
+      "extensions": ["scss", "css"]
+    },
+
+    "images": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    }
+  }
+}

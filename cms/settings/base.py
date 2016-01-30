@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = os.path.join(BASE_DIR, '../')
 
 SITE_DOMAIN = "interactive-cms.com"
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = (
 
     'django_extensions',
     'debug_toolbar',
+    'webpack_loader',
 
     'cms.apps.pages',
     'cms.apps.sites',
@@ -118,7 +120,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "assets"),  # For webpack_loader
     os.path.join(BASE_DIR, "static"),
 )
 
 AUTH_USER_MODEL = 'users.User'
+
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'build/',
+        'STATS_FILE': os.path.join(ROOT_DIR, 'webpack-stats.json')
+    }
+}
